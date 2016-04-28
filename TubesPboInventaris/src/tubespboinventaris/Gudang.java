@@ -4,27 +4,25 @@
  * and open the template in the editor.
  */
 package tubespboinventaris;
-
 import java.util.ArrayList;
 /**
  *
  * @author aris
  */
-public class Penyedia extends Orang{
+public class Gudang {
+    public int index;
+    public int id;
     ArrayList<Barang> daftarBarang=new ArrayList<>();
-    private int index;
-    
 
-    public Penyedia(String nama, String jenisBarang,int nip) {
-        super(nama,jenisBarang, nip);
-        
+    public Gudang(int id) {
+        this.id=id;
     }
-   
-    public void createBarang(int idBrg,String namaBrg, String jenisBrg, int jml, int harga){
-        Barang brg=new Barang(idBrg,namaBrg,jenisBrg,jml,harga);
+    
+    public void addBarang(int idBrg){
+        Barang brg=new Barang(idBrg);
         daftarBarang.add(brg);
-        
     }
+    
     public Barang getBarangByIndex(){
         return daftarBarang.get(index);
     }

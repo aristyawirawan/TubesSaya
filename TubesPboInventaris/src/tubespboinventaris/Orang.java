@@ -10,8 +10,22 @@ package tubespboinventaris;
  * @author aris
  */
 public abstract class Orang {
-    private String nama;
+    private String nama,jenisBarang;
     private int nip;
+
+    public Orang(String nama, String jenisBarang, int nip) {
+        this.nama = nama;
+        this.jenisBarang = jenisBarang;
+        this.nip = nip;
+    }
+
+    public String getJenisBarang() {
+        return jenisBarang;
+    }
+
+    public void setJenisBarang(String jenisBarang) {
+        this.jenisBarang = jenisBarang;
+    }
     
     public Orang(String nama,int nip){
         this.nama=nama;
